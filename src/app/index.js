@@ -12,6 +12,7 @@ import { Home } from "./components/Home";
 import { User } from "./components/User";
 import SignUp from "./containers/signup/signup-page";
 import SignIn from "./containers/signin/signin-page";
+import CompanyPage from "./containers/company/company-page";
 import DashboardComponent from "./components/dashboard/dashboard-component";
 
 // const initialState = Immutable.Map({
@@ -33,6 +34,11 @@ const initialState = {
          signinFormData: {},
          info: {},
          isPropUpdate:false
+    },
+    companyData: {
+         companyFormData: {},
+         info: {},
+         isPropUpdate:false
     }
    
 };
@@ -49,6 +55,7 @@ var routes = (
         <Route path={"/"} component={Root} >
             <IndexRoute component={Home} />
             <Route path={"user"} component={User} />
+            <Route path={"company"} component={CompanyPage} />
             <Route path={"home"} component={Home} />
             <Route path={"signup"} component={SignUp} />
             <Route path={"signin"} component={SignIn} />
